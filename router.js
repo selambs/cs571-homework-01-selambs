@@ -1,7 +1,8 @@
-const express = require('express');
+const express = require("express");
+const fibonacci = require("./fibController");
 const router = express.Router();
-const calculationController = require('./controller');
 
-router.get("/calculate",calculationController.fibonacci);
+// router.get(`/calculate/:?n=${5}`, fibonacci.calculateFib);
+router.get("/calculaten=5", fibonacci.calculateFib);
 
 module.exports = router;
